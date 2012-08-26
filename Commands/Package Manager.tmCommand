@@ -24,8 +24,8 @@ printframe() {
 	&lt;TITLE&gt;Rdaemon &amp;mdash; Package Manager&lt;/TITLE&gt;
 	&lt;/HEAD&gt;
 	&lt;FRAMESET ROWS="*,45%" FRAMEBORDER="5" FRAMESPACING="5" BORDER="7" FRAMEBORDER="YES"&gt;
-		&lt;FRAME SRC="tm-file://${TM_BUNDLE_SUPPORT// /%20}/lib/pkman.html" NAME="head" MARGINWIDTH="30" MARGINHEIGHT="0"  SCROLLING="YES"&gt;
-		&lt;FRAME SRC="tm-file://${TM_BUNDLE_SUPPORT// /%20}/lib/pkdata.html" NAME="data" MARGINWIDTH="30" MARGINHEIGHT="0"  SCROLLING="YES"&gt;
+		&lt;FRAME SRC="file://${TM_BUNDLE_SUPPORT// /%20}/lib/pkman.html" NAME="head" MARGINWIDTH="30" MARGINHEIGHT="0"  SCROLLING="YES"&gt;
+		&lt;FRAME SRC="file://${TM_BUNDLE_SUPPORT// /%20}/lib/pkdata.html" NAME="data" MARGINWIDTH="30" MARGINHEIGHT="0"  SCROLLING="YES"&gt;
 	&lt;/FRAMESET&gt;
 	&lt;/HTML&gt;
 HF

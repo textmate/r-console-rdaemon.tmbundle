@@ -8,8 +8,8 @@ theport <- ifelse(!tools:::httpdPort,tools::startDynamicHelp(T),tools:::httpdPor
 pkgs <- paste("<td class=point onclick=\"show('http://127.0.0.1:", theport, "/library/", pkgsraw, "/html/00Index.html", "')\">", x[, 1], "</td>", sep="")
 pkgs.desc <- paste("<td class=point onclick=\"show('http://127.0.0.1:", theport, "/library/", pkgsraw, "/html/00Index.html", "')\">",x[, 3],"</td>",sep="")
 } else {
-pkgs <- paste("<td class=point onclick=\"show('tm-file://", file.path(.find.package(pkgsraw), "html", "00Index.html"), "')\">",x[, 1],"</td>",sep="")
-pkgs.desc <- paste("<td class=point onclick=\"show('tm-file://", file.path(.find.package(pkgsraw), "html", "00Index.html"), "')\">",x[, 3],"</td>",sep="")
+pkgs <- paste("<td class=point onclick=\"show('file://", file.path(.find.package(pkgsraw), "html", "00Index.html"), "')\">",x[, 1],"</td>",sep="")
+pkgs.desc <- paste("<td class=point onclick=\"show('file://", file.path(.find.package(pkgsraw), "html", "00Index.html"), "')\">",x[, 3],"</td>",sep="")
 }
 is.loaded <- !is.na(match(pkgsraw, loaded.pkgs))
 pkgs.status <- character(length(is.loaded))
