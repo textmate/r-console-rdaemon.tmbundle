@@ -61,7 +61,7 @@ if [ "${#RES}" -eq 0 ]; then
 	exit_insert_text
 fi
 #echo -en "$RES" &amp;&amp; exit_create_new_document
-ruby -- &lt;&lt;-SCRIPT 2&gt; /dev/null
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -- &lt;&lt;-SCRIPT 2&gt; /dev/null
 require File.join(ENV["TM_SUPPORT_PATH"], "lib/exit_codes.rb")
 require "#{ENV["TM_SUPPORT_PATH"]}/lib/ui"
 word = "$WORD"

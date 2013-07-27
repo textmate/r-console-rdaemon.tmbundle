@@ -12,5 +12,5 @@ export LC_NUMERIC=${TM_RdaemonLC_NUMERIC:-}
 export LC_MESSAGES=${TM_RdaemonLC_MESSAGES:-}
 export LC_PAPER=${TM_RdaemonLC_PAPER:-}
 export LC_MEASUREMENT=${TM_RdaemonLC_MEASUREMENT:-}
-ruby "$HOME/Library/Application Support/Rdaemon"/daemon/Rdaemon.rb &> /dev/null &
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby "$HOME/Library/Application Support/Rdaemon"/daemon/Rdaemon.rb &> /dev/null &
 
