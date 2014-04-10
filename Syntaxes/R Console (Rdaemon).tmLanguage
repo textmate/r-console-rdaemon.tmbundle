@@ -72,7 +72,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\n\z</string>
+			<string>\n</string>
 			<key>name</key>
 			<string>source.rd.console.prompt</string>
 			<key>patterns</key>
@@ -95,7 +95,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\n\z</string>
+			<string>\n</string>
 			<key>name</key>
 			<string>source.rd.console.prompt</string>
 			<key>patterns</key>
