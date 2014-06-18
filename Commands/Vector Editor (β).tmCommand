@@ -7,7 +7,7 @@
 	<key>bundleUUID</key>
 	<string>DA2A7475-3FDF-4D66-A796-1C45F6BBF5B9</string>
 	<key>command</key>
-	<string>VAR=$(/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -- &lt;&lt;-SCR1 
+	<string>VAR=$(ruby18 -- &lt;&lt;-SCR1 
 	require File.join(ENV["TM_SUPPORT_PATH"], "lib/current_word.rb")
 	word = Word.current_word('\w\.')
 print word

@@ -22,32 +22,32 @@ echo -ne "Enter a valid and non-existing file name without an extension" | perl 
 while [ "$TMD_returnCode" != 6 ]
 do
 	export DIA=$( cat "$MYDIR"/bin/icf.plist | "$DIALOG" -m "$MYDIR"/nibs/saveimage.nib )
-	TMD_returnCode=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_returnCode=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["returnCode"]
     AS
     `
-	TMD_outfmtValue=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_outfmtValue=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["outfmtValue"]
     AS
     `
-	TMD_filename=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_filename=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["filename"].gsub(/^~/,ENV["HOME"])
     AS
     `
-	TMD_qualityValue=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_qualityValue=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["qualityValue"]
     AS
     `
-	TMD_tiffcompValue=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_tiffcompValue=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["tiffcompValue"]
     AS
     `
-	TMD_gray=`cat <<-AS | /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby --
+	TMD_gray=`cat <<-AS | ruby18 --
     require "#{ENV['TM_SUPPORT_PATH']}/lib/osx/plist"
     print OSX::PropertyList::load(%x{echo -en "$DIA"})["gray"]
 AS

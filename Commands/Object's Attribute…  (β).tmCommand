@@ -41,7 +41,7 @@ function getSig {
 
 }
 
-WORD=$(/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -- &lt;&lt;-SCR1 
+WORD=$(ruby18 -- &lt;&lt;-SCR1 
 require File.join(ENV["TM_SUPPORT_PATH"], "lib/current_word.rb")
 word = Word.current_word('\w\.')
 print word
@@ -61,7 +61,7 @@ if [ "${#RES}" -eq 0 ]; then
 	exit_insert_text
 fi
 #echo -en "$RES" &amp;&amp; exit_create_new_document
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -- &lt;&lt;-SCRIPT 2&gt; /dev/null
+ruby18 -- &lt;&lt;-SCRIPT 2&gt; /dev/null
 require File.join(ENV["TM_SUPPORT_PATH"], "lib/exit_codes.rb")
 require "#{ENV["TM_SUPPORT_PATH"]}/lib/ui"
 word = "$WORD"
